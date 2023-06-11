@@ -1,0 +1,62 @@
+section#services {
+    .container {
+        h2 {
+            text-align: left;
+            font-size: 2rem;
+            color: $whiteColor;
+        }
+
+        .info {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .card {
+                padding: 2rem;
+                background-color: $darkestColor;
+                min-height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                transition: all 200ms ease-in-out;
+
+                &:hover {
+                    border: 1px solid $redColor;
+                }
+
+                span {
+                    color: $redColor;
+                    font-size: 2rem;
+                }
+
+                h6 {
+                    color: $whiteColor;
+                    font-size: 1.7rem;
+                    margin: 2rem 0;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $redColor;
+                    text-decoration: underline;
+                }
+
+                @include mobile {
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+}

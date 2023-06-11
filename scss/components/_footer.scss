@@ -1,0 +1,23 @@
+section#footer {
+    padding: 5rem 0;
+    background-color: $darkestColor;
+    .container {
+        text-align: left;
+        #socials {
+            margin: 2rem 0;
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font-size: 1.7rem;
+                color: $redColor;
+                font-weight: bold;
+                text-align: left;
+                margin-right: .5rem;
+            }
+        }
+        p {
+            color: $whiteColor;
+        }
+    }
+}

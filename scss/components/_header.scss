@@ -1,0 +1,161 @@
+header#home {
+    height: 100vh;
+    background-color: $darkColor;
+    background-image: url('/src/images/home-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #toggler {
+        display: none;
+        color: $whiteColor;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        background-color: transparent;
+        z-index: 999;
+
+        @include mobile {
+            display: block;
+        }
+
+    }
+
+    @include mobile {
+        background-image: url('/src/images/home-img.png');
+        background-size: auto;
+        background-blend-mode: overlay;
+        background-position: top center;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100vh;
+        background-color: $darkestColor;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        >a {
+            color: $whiteColor;
+            font-size: 1rem;
+            transform: rotateZ(-90deg);
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 200ms ease-in-out;
+
+            &:hover,
+            &.active {
+                color: $redColor;
+            }
+        }
+
+        @include tablet {
+            width: 60px;
+        }
+
+        @include mobile {
+            display: none;
+            height: 100vh;
+            width: 100%;
+            top: 0rem;
+            flex-direction: column;
+            padding: 2rem 0;
+
+            a {
+                transform: none;
+            }
+
+            &.open {
+                display: flex;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 80vh;
+
+        #follow-me {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+
+            p,
+            a {
+                color: $whiteColor;
+                font-weight: bold;
+            }
+
+            a {
+                font-size: 1.2rem;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border: 1px solid $whiteColor;
+                border-radius: 3px;
+                line-height: 30px;
+                text-align: center;
+                transition: all 200ms ease-in-out;
+
+                &:hover {
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        #info {
+            width: 50%;
+            color: $whiteColor;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            a {
+                display: inline-block;
+                padding: 1rem 3rem;
+                background-color: $redColor;
+                color: $whiteColor;
+                text-transform: uppercase;
+            }
+        }
+
+        @include tablet {
+            padding-left: 9rem;
+        }
+
+        @include mobile {
+            padding-left: 0rem;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+            #follow-me,
+            #info {
+                width: 90%;
+            }
+        }
+    }
+}

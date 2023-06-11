@@ -1,0 +1,57 @@
+section#contact {
+    .container {
+        h2 {
+            text-align: left;
+            font-size: 2rem;
+            color: $whiteColor;
+        }
+
+        form {
+            border-radius: 2px;
+            margin: 0 auto;
+
+            >div {
+                margin: 1rem 0;
+
+                input,
+                textarea {
+                    display: block;
+                    border: 1px solid $darkestColor;
+                    padding: 1rem;
+                    border-radius: 3px;
+                    width: 80%;
+                    background-color: transparent;
+                    &::placeholder {
+                        color: $whiteColor;
+                    }
+                }
+
+                button {
+                    display: inline-flex;
+                    min-width: 120px;
+                    padding: 1rem;
+                    color: $whiteColor;
+                    background-color: $redColor;
+                    border-radius: 2px;
+                    text-transform: uppercase;
+                    align-items: center;
+                    gap: .3rem;
+                }
+
+                @include tablet {
+                    input,
+                    textarea {
+                        width: 80%
+                    }
+                }
+
+                @include mobile {
+                    input,
+                    textarea {
+                        width: 100%
+                    }
+                }
+            }
+        }
+    }
+}
