@@ -25,7 +25,7 @@ export default function Works() {
     },
     {
       img: Work5,
-      link: "https://github.com/Samahzaytoun",
+      link: "https://wonderful-muffin-1a3ed5.netlify.app/",
     },
     {
       img: Work6,
